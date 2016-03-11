@@ -1,0 +1,39 @@
+<div class="panel">
+	<div class="panel-heading">
+		<h2 class="panel-title">Editar Movimiento</h2>
+	</div><!-- /.panel-heading -->
+ 	<div class="panel-body">
+    	<form action="" name="frmEditMovement">
+    		<div class="row">
+    			<div class="col-sm-6">
+    				<div class="form-group">
+    					<label for="date">Fecha</label>
+    					<input type="date" class="form-control" id="date" placeholder="{{ item.date | date: MM/dd/yyyy}}" ng-model="date" required>
+    				</div><!-- /.form-group-fecha -->
+  				</div><!-- /.col-sm-6 -->
+  				<div class="col-sm-6">
+  					<div class="form-group">
+    					<label for="amount">Monto</label>
+    					<input type="number" class="form-control" id="amount" ng-model="amount" placeholder="{{ item.amount }}"required>
+  					</div><!-- /.form-group-amount -->
+  				</div><!-- /.col-sm-6 -->
+  			</div><!-- /.row -->
+  			<div class="row">
+    			<div class="col-sm-12">
+    				<div class="form-group">
+    					<label for="detail">Detalle</label>
+    					<textarea class="form-control" id="detail" ng-model="detail" placeholder="{{ item.detail }}" required></textarea>
+    				</div><!-- /.form-group-detail -->
+  				</div><!-- /.col-sm-12 -->
+  			</div><!-- /.row -->
+        <div class="row">
+          <div class="col-sm-6">
+            <a class="btn btn-lg btn-block" href="#/account">Cancelar</a>
+          </div><!-- /.col-sm-6 -->
+          <div class="col-sm-6">
+            <button class="btn btn-lg btn-block" ng-click="editMovement()" ng-disabled="frmEditMovement.$invalid">Salvar</button>
+          </div><!-- /.col-sm-6 -->
+        </div><!-- /.row -->
+    	</form>
+	</div><!-- /.panel-body -->
+</div><!-- /.panel -->

@@ -1,0 +1,48 @@
+<div class="panel">
+	<div class="panel-heading">
+		<h2 class="panel-title">Registro</h2>
+	</div><!-- /.panel-heading -->
+ 	<div class="panel-body">
+    	<form action="" name="frmAddUserAcount">
+    		<div class="row">
+    			<div class="col-sm-6">
+    				<div class="form-group">
+    					<label for="name">Dueño</label>
+    					<input type="text" class="form-control" name="name" placeholder="Titular de la cuenta" ng-model="name" required>
+    				</div><!-- /.form-group-name -->
+  				</div><!-- /.col-sm-6 -->
+  				<div class="col-sm-6">
+  					<div class="form-group">
+    					<label for="email">Email</label>
+    					<input type="email" class="form-control" name="email" placeholder="fulanito@miCuenta.com" ng-model="email" required>
+  					</div><!-- /.form-group-email -->
+  				</div><!-- /.col-sm-6 -->
+  			</div><!-- /.row -->
+  			<div class="row">
+    			<div class="col-sm-6">
+    				<div class="form-group">
+    					<label for="currency">Moneda</label>
+    					<select class="form-control" name="currency" ng-model="currency" required>
+  							<option value="colones">Colones</option>
+  							<option value="dolars">Dólares</option>
+						</select>
+    				</div><!-- /.form-group-currency -->
+  				</div><!-- /.col-sm-6 -->
+  				<div class="col-sm-6">
+  					<div class="form-group">
+    					<label for="type">Tipo</label>
+    					<select class="form-control" name="type" ng-model="type" required>
+  							<option value="corriente">Corriente</option>
+  							<option value="ahorros">Ahorros</option>
+						</select>
+  					</div><!-- /.form-group-type -->
+  				</div><!-- /.col-sm-6 -->
+  			</div><!-- /.row -->
+  			<div class="row">
+          		<div class="col-sm-12">
+            		<button class="btn btn-lg btn-block" ng-click="addUser()" ng-disabled="frmAddUserAcount.$invalid">Salvar</button>
+          		</div><!-- /.col-sm-12 -->
+        	</div><!-- /.row -->
+    	</form>
+	</div><!-- /.panel-body -->
+</div><!-- /.panel -->

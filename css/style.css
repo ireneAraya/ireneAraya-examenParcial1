@@ -1,0 +1,138 @@
+body{
+	background: #ecf0f1;
+	color: #2c3e50;
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin-top: 0;
+}
+
+header{
+	background: #c0392b;
+	border-bottom: 1px solid #7f8c8d;
+}
+
+h1{
+	padding: 40px 0;
+	font-size: 40px;
+	
+	color: #ecf0f1;
+}
+
+li{
+	list-style: none;
+}
+
+table{
+	width: 100%;
+}
+
+td{
+	padding: 10px 0;
+	border-top: 1px solid #95a5a6;
+}
+
+label{
+	font-size: 18px;
+}
+
+.navbar-brand{
+	margin-bottom: 0;
+	color: #bdc3c7;
+}
+
+.navbar li a{
+	color: #ecf0f1;
+}
+
+.navbar li a:hover{
+	color: #bdc3c7;
+	background: none;
+}
+
+.navbar .active a{
+	border-radius: 8px;
+	background: #ecf0f1;
+	color: #c0392b;
+}
+
+.app-container{
+	margin-top: 40px;
+}
+
+.no-movements{
+	padding: 60px 0;
+	border: 1px solid #7f8c8d;
+	background: #ffffff;
+}
+
+.no-movements .btn{
+	margin-top: 20px;
+}
+
+.panel{
+	margin: 0 80px;
+}
+
+.panel-heading{
+	background: #d35400;
+}
+
+.panel-heading input{
+	padding: 0 10px;
+	border: none;
+	line-height: 30px;
+}
+
+.row{
+	margin-right: 0;
+    margin-left: 0;
+}
+
+.panel-title{
+	font-size: 30px;
+	color: #ecf0f1;
+}
+
+.btn{
+	background: #d35400;
+	color: #ecf0f1;
+}
+
+.btn:hover{
+	background: #7f8c8d;
+	color: #ffffff;
+}
+
+.btn-icon{
+	border: none;
+	background: none;
+}
+
+.fa-trash{
+	color: #c0392b;
+}
+
+.fa-pencil{
+	color: #27ae60;
+}
+
+.fa-eye{
+	color: #2980b9;
+}
+
+.fa-plus-circle{
+	color: #8e44ad;
+}
+
+.fa-backward{
+	color: #e67e22;
+}
+
+.fa-trash:hover, .fa-pencil:hover, .fa-eye:hover, .fa-plus-circle:hover, .fa-backward:hover{
+	color: #2c3e50;
+}
+
+
+
+

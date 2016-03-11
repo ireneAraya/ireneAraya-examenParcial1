@@ -1,0 +1,29 @@
+<div class="panel">
+	<div class="panel-heading">
+		<h2 class="panel-title">Detalle de Transacción</h2>
+	</div><!-- /.panel-heading -->
+ 	<div class="panel-body">
+        <table>
+            <tr class="row">
+                <th class="col-sm-2 text-center"><h4>Transacción</h4></th>
+                <th class="col-sm-2 text-center"><h4>Fecha</h4></th>
+                <th class="col-sm-4 text-center"><h4>Detalle</h4></th>
+                <th class="col-sm-2 text-center"><h4>Monto</h4></th>
+                <th class="col-sm-2 text-center"><h4>Acciones</h4></th>
+            </tr>
+            <tr class="row">
+                <td class="col-sm-2 text-center" >{{ item.id }}</td>
+                <td class="col-sm-2 text-center">{{ item.date | date: MM/dd/yyyy}}</td>
+                <td class="col-sm-4 text-center">{{ item.detail }}</td>
+                <td class="col-sm-2 text-center">{{ item.amount }}</td>
+                <td class="col-sm-2 text-center">
+                    <a href="#/account" class="btn-icon"><i class="fa fa-backward fa-lg"></i></a>
+                    <button ng-click="removeMovement()" class="btn-icon"><i class="fa fa-trash fa-lg"></i></button>
+                    <a href="#/editMovement/{{ item.id }}" class="btn-icon"><i class="fa fa-pencil fa-lg"></i></i></button>
+                </td>
+            </tr>
+        </table>
+	</div><!-- /.panel-body -->
+</div><!-- /.panel -->
+
+
