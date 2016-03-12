@@ -1,17 +1,17 @@
 angular.module ('myAccountApp.controllers')
 
 .controller('NewAccountCtrl',[
-	'$scope',
-	'$routeParams',
+    '$scope',
+    '$routeParams',
     '$location',
     'UserService',
     function($scope, $routeParams, $location, UserService) {
-        var localStorageKey = 'oneAccount';
+        var accountsKey = 'AccountsList';
 
         //Busca en localStorage las llaves 
 
-        $scope.accounts = UserService.verify(localStorageKey) || [];
-        $scope.lastID = UserService.verify('oneAccountLastID') || 0;
+        $scope.accounts = UserService.verify(accountsKey) || [];
+        $scope.lastID = UserService.verify('accountsLastId') || 0;
 
         $scope.notFound = false;    
 
@@ -43,10 +43,10 @@ angular.module ('myAccountApp.controllers')
         }
             // Persiste los cambios
             $scope.$watch('accounts', function(newValue, oldValue) {
-                UserService.save(localStorageKey, newValue);
+                UserService.save(accountsKey, newValue);
             }, true);
             $scope.$watch('lastID', function(newValue, oldValue) {
-                UserService.save('oneAccountLastID', newValue);
+                UserService.save('accountsLastId', newValue);
             }, true);    
         }
 ])

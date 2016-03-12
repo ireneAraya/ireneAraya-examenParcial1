@@ -7,12 +7,12 @@ angular.module ('myAccountApp.controllers')
     'UserService',
     'MovementService',
     function($scope, $routeParams, $location, UserService, MovementService) {
-    	var localStorageKey = 'oneMovement';
+    	var movementsKey = 'MovementsList';
         var currentID = $routeParams.id;
 
     	//Busca en localStorage las llaves
-    	$scope.movements = MovementService.verify(localStorageKey) || [];
-    	$scope.lastID = MovementService.verify('oneMovementLastID') || 0;
+    	$scope.movements = MovementService.verify(movementsKey) || [];
+    	$scope.lastID = MovementService.verify('movementsLastId') || 0;
 
         //Llama a la función getItem
         $scope.item = MovementService.getItem($scope.movements, currentID);
@@ -55,9 +55,8 @@ angular.module ('myAccountApp.controllers')
             $location.path('/account');
         };
 
-        $scope.editMovement = function(newValue, oldValue, updated) {
+        $scope.editMovement = function() {
             
-
             $location.path('/movementDetail/:id')
         };
 
@@ -72,10 +71,10 @@ angular.module ('myAccountApp.controllers')
 
     	// Persiste los cambios
     	$scope.$watch('movements', function(newValue, oldValue) {
-            MovementService.save(localStorageKey, newValue);
+            MovementService.save(movementsKey, newValue);
         }, true);
         $scope.$watch('lastID', function(newValue, oldValue) {
-            MovementService.save('oneMovementLastID', newValue);
+            MovementService.save('movementsLastId', newValue);
         }, true);    
     }
  ])

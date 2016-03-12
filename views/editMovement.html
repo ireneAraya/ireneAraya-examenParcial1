@@ -8,13 +8,13 @@
     			<div class="col-sm-6">
     				<div class="form-group">
     					<label for="date">Fecha</label>
-    					<input type="date" class="form-control" id="date" placeholder="{{ item.date | date: MM/dd/yyyy}}" ng-model="date" required>
+    					<input type="date" class="form-control" id="newDate" placeholder="{{ item.date | date: MM/dd/yyyy}}" ng-model="newDate" required>
     				</div><!-- /.form-group-fecha -->
   				</div><!-- /.col-sm-6 -->
   				<div class="col-sm-6">
   					<div class="form-group">
     					<label for="amount">Monto</label>
-    					<input type="number" class="form-control" id="amount" ng-model="amount" placeholder="{{ item.amount }}"required>
+    					<input type="number" class="form-control" id="newAmount" ng-model="newAmount" placeholder="{{ item.amount }}"required>
   					</div><!-- /.form-group-amount -->
   				</div><!-- /.col-sm-6 -->
   			</div><!-- /.row -->
@@ -22,7 +22,7 @@
     			<div class="col-sm-12">
     				<div class="form-group">
     					<label for="detail">Detalle</label>
-    					<textarea class="form-control" id="detail" ng-model="detail" placeholder="{{ item.detail }}" required></textarea>
+    					<textarea class="form-control" id="newDetail" ng-model="newDetail" placeholder="{{ item.detail }}" required></textarea>
     				</div><!-- /.form-group-detail -->
   				</div><!-- /.col-sm-12 -->
   			</div><!-- /.row -->
